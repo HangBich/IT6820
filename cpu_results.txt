@@ -1,0 +1,42 @@
+program                                   SingleCycleCPU                       PipelineCPU
+01_alu                                              FAIL                              FAIL   (34 instr)
+  SingleCycleCPU: register write #0: got none, expected x5 <- 0x80000000 (0 vs 32 writes)
+  SingleCycleCPU: 0 cycles traced, 0 reg writes, 0 stores
+  PipelineCPU: register write #0: got none, expected x5 <- 0x80000000 (0 vs 32 writes)
+  PipelineCPU: 0 cycles traced, 0 reg writes, 0 stores
+02_memory                                           FAIL                              FAIL   (323 instr)
+  SingleCycleCPU: register write #0: got none, expected x8 <- 0x00000100 (0 vs 187 writes)
+  SingleCycleCPU: store #0: got none, expected mem[0x00000100] <- 0x0000000b
+  SingleCycleCPU: 0 cycles traced, 0 reg writes, 0 stores
+  PipelineCPU: register write #0: got none, expected x8 <- 0x00000100 (0 vs 187 writes)
+  PipelineCPU: store #0: got none, expected mem[0x00000100] <- 0x0000000b
+  PipelineCPU: 0 cycles traced, 0 reg writes, 0 stores
+03_branch_jump                                      FAIL                              FAIL   (61 instr)
+  SingleCycleCPU: register write #0: got none, expected x8 <- 0x00000000 (0 vs 38 writes)
+  SingleCycleCPU: store #0: got none, expected mem[0x00000000] <- 0x0000003f
+  SingleCycleCPU: 0 cycles traced, 0 reg writes, 0 stores
+  PipelineCPU: register write #0: got none, expected x8 <- 0x00000000 (0 vs 38 writes)
+  PipelineCPU: store #0: got none, expected mem[0x00000000] <- 0x0000003f
+  PipelineCPU: 0 cycles traced, 0 reg writes, 0 stores
+04_hazards                                          FAIL                              FAIL   (73 instr)
+  SingleCycleCPU: register write #0: got none, expected x5 <- 0x00000003 (0 vs 49 writes)
+  SingleCycleCPU: store #0: got none, expected mem[0x00000200] <- 0x00000029
+  SingleCycleCPU: 0 cycles traced, 0 reg writes, 0 stores
+  PipelineCPU: register write #0: got none, expected x5 <- 0x00000003 (0 vs 49 writes)
+  PipelineCPU: store #0: got none, expected mem[0x00000200] <- 0x00000029
+  PipelineCPU: 0 cycles traced, 0 reg writes, 0 stores
+05_fibonacci                                        FAIL                              FAIL   (146 instr)
+  SingleCycleCPU: register write #0: got none, expected x5 <- 0x00000000 (0 vs 105 writes)
+  SingleCycleCPU: store #0: got none, expected mem[0x00000000] <- 0x00000000
+  SingleCycleCPU: 0 cycles traced, 0 reg writes, 0 stores
+  PipelineCPU: register write #0: got none, expected x5 <- 0x00000000 (0 vs 105 writes)
+  PipelineCPU: store #0: got none, expected mem[0x00000000] <- 0x00000000
+  PipelineCPU: 0 cycles traced, 0 reg writes, 0 stores
+06_bubble_sort                                      FAIL                              FAIL   (638 instr)
+  SingleCycleCPU: register write #0: got none, expected x8 <- 0x00000080 (0 vs 415 writes)
+  SingleCycleCPU: store #0: got none, expected mem[0x00000080] <- 0x00000009
+  SingleCycleCPU: 0 cycles traced, 0 reg writes, 0 stores
+  PipelineCPU: register write #0: got none, expected x8 <- 0x00000080 (0 vs 415 writes)
+  PipelineCPU: store #0: got none, expected mem[0x00000080] <- 0x00000009
+  PipelineCPU: 0 cycles traced, 0 reg writes, 0 stores
+12 FAILURE(S)
