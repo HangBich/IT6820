@@ -132,7 +132,6 @@ PC kế tiếp chọn giữa PC+4, PC+imm (branch được lấy hoặc JAL), v�
 
 ```
 project.circ               CPU (được sinh lại bằng tools/gen/build_project.py)
-Lab1.circ                  bản gốc
 tools/asm/rvasm.py         assembler → .hex / nạp vào ROM
 tools/asm/rvsim.py         mô hình tham chiếu ISA
 tools/gen/                 script sinh project.circ (lgen.py: thư viện sinh mạch Logisim)
