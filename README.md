@@ -143,18 +143,6 @@ tests/programs/            chương trình test / demo
 tests/cpu/                 test toàn CPU
 ```
 
-### Quan hệ với Lab1
-
-- `ALU`, `ALUControl` và `InstructionDecode` được giữ nguyên từ Lab1. Riêng ALU sửa 2 lỗi:
-  - SRA đang dùng phép dịch logic, đã đổi sang dịch số học;
-  - SLT trả về -1 thay vì 1, đã đổi Bit Extender sang mở rộng không dấu.
-- Các mạch sau được làm lại, giữ tên mạch và tên chân:
-  - `RegisterFile`: cổng đọc rs2 nối lệch thanh ghi, x31 không ghi được;
-  - `Memory`: đọc ra giá trị không xác định;
-  - `ImmGen`: thiếu immediate kiểu J, kiểu B và U sai;
-  - `BranchUnit`: mới có BEQ/BNE;
-  - `MainControl`: thiếu tín hiệu cho JAL/JALR/LUI/AUIPC và WBSel.
-
 ### Sinh lại project.circ
 
 ```sh
