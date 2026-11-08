@@ -1,0 +1,8 @@
+program                                   SingleCycleCPU                       PipelineCPU
+01_alu                           PASS    34 cyc CPI 1.00           PASS    38 cyc CPI 1.12   (34 instr)
+02_memory                        PASS   323 cyc CPI 1.00           PASS   483 cyc CPI 1.50   (323 instr)
+03_branch_jump                   PASS    61 cyc CPI 1.00           PASS   103 cyc CPI 1.69   (61 instr)
+04_hazards                       PASS    73 cyc CPI 1.00           PASS   104 cyc CPI 1.42   (73 instr)
+05_fibonacci                     PASS   146 cyc CPI 1.00           PASS   188 cyc CPI 1.29   (146 instr)
+06_bubble_sort                   PASS   638 cyc CPI 1.00           PASS   926 cyc CPI 1.45   (638 instr)
+ALL PASSED

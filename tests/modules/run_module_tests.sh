@@ -8,7 +8,7 @@ JAR=${LOGISIM_JAR:-/Applications/Logisim-evolution.app/Contents/app/logisim-evol
 fail=0
 for vec in "$DIR"/*.vec; do
   name=$(basename "$vec" .vec)
-  out=$("$JAVA" -jar "$JAR" --no-splash "$CIRC" --toplevel-circuit "$name" --test-vector "$name" "$vec" 2>&1)
+  out=$("$JAVA" -jar "$JAR" --no-splash --test-vector "$name" "$vec" "$CIRC" 2>&1)
   summary=$(printf '%s\n' "$out" | grep -E '^Passed:' | tail -1)
   printf '%-20s %s\n' "$name" "${summary:-ERROR}"
   case "$summary" in

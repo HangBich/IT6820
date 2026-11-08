@@ -1,0 +1,27 @@
+ALU                  Passed: 250, Failed: 0
+ALUControl           Passed: 64, Failed: 0
+BranchUnit           Passed: 192, Failed: 0
+EX_MEM               Passed: 120, Failed: 0
+ForwardingUnit       Passed: 181, Failed: 69
+Error on test vector 1:
+  fwdB = 00 (expected 10)
+2 3 
+Error on test vector 3:
+  fwdA = 00 (expected 01)
+4 5 6 7 
+Error on test vector 7:
+  fwdB = 00 (expected 10)
+8 9 10 11 12 13 
+Error on test vector 13:
+  fwdA = 00 (expected 10)
+14 15 16 
+HazardUnit           Passed: 150, Failed: 0
+ID_EX                Passed: 120, Failed: 0
+IF_ID                Passed: 120, Failed: 0
+ImmGen               Passed: 150, Failed: 0
+InstructionDecode    Passed: 40, Failed: 0
+MEM_WB               Passed: 120, Failed: 0
+MainControl          Passed: 11, Failed: 0
+Memory               Passed: 165, Failed: 0
+RegisterFile         Passed: 176, Failed: 0
+WBBypass             Passed: 150, Failed: 0

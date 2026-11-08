@@ -1,0 +1,18 @@
+program                                      PipelineCPU
+01_alu                           PASS    38 cyc CPI 1.12   (34 instr)
+02_memory                                           FAIL   (323 instr)
+  PipelineCPU: register write #16: got x30 <- 0x00000000, expected x29 <- 0x00000144 (235 vs 187 writes)
+  PipelineCPU: store #5: got mem[0x00000140] <- 0x00000001, expected mem[0x00000144] <- 0x00000001
+03_branch_jump                                      FAIL   (61 instr)
+  PipelineCPU: register write #3: got x8 <- 0x000003e8, expected x8 <- 0x00000001 (31 vs 38 writes)
+  PipelineCPU: store #0: got none, expected mem[0x00000000] <- 0x0000003f
+04_hazards                                          FAIL   (73 instr)
+  PipelineCPU: register write #15: got x31 <- 0x00000201, expected x31 <- 0x0000002a (30 vs 49 writes)
+  PipelineCPU: store #1: got mem[0x00000204] <- 0x00000200, expected mem[0x00000204] <- 0x00000029
+05_fibonacci                                        FAIL   (146 instr)
+  PipelineCPU: register write #9: got x10 <- 0x00000000, expected x29 <- 0x00000002 (10 vs 105 writes)
+  PipelineCPU: store #1: got none, expected mem[0x00000004] <- 0x00000001
+06_bubble_sort                                      FAIL   (638 instr)
+  PipelineCPU: register write #18: got x7 <- 0x00000084, expected x19 <- 0x00000001 (33 vs 415 writes)
+  PipelineCPU: store #11: got none, expected mem[0x00000084] <- 0x00000009
+5 FAILURE(S)

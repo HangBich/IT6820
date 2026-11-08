@@ -1,0 +1,15 @@
+ALU                  Passed: 250, Failed: 0
+ALUControl           Passed: 64, Failed: 0
+BranchUnit           Passed: 192, Failed: 0
+EX_MEM               Passed: 120, Failed: 0
+ForwardingUnit       Passed: 250, Failed: 0
+HazardUnit           Passed: 150, Failed: 0
+ID_EX                Passed: 120, Failed: 0
+IF_ID                Passed: 120, Failed: 0
+ImmGen               Passed: 150, Failed: 0
+InstructionDecode    Passed: 40, Failed: 0
+MEM_WB               Passed: 120, Failed: 0
+MainControl          Passed: 11, Failed: 0
+Memory               Passed: 165, Failed: 0
+RegisterFile         Passed: 176, Failed: 0
+WBBypass             Passed: 150, Failed: 0

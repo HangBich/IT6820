@@ -1,0 +1,27 @@
+ALU                  Passed: 250, Failed: 0
+ALUControl           Passed: 64, Failed: 0
+BranchUnit           Passed: 192, Failed: 0
+EX_MEM               Passed: 120, Failed: 0
+ForwardingUnit       Passed: 250, Failed: 0
+HazardUnit           Passed: 0, Failed: 150
+Error on test vector 1:
+  stall = U (expected 0)
+2 
+Error on test vector 2:
+  stall = U (expected 1)
+3 
+Error on test vector 3:
+  stall = U (expected 0)
+4 
+Error on test vector 4:
+  stall = U (expected 0)
+5 
+ID_EX                Passed: 120, Failed: 0
+IF_ID                Passed: 120, Failed: 0
+ImmGen               Passed: 150, Failed: 0
+InstructionDecode    Passed: 40, Failed: 0
+MEM_WB               Passed: 120, Failed: 0
+MainControl          Passed: 11, Failed: 0
+Memory               Passed: 165, Failed: 0
+RegisterFile         Passed: 176, Failed: 0
+WBBypass             Passed: 150, Failed: 0

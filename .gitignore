@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+mut_*.circ
+demo_*.circ
+pipe_04.circ
+tests/programs/*.hex
