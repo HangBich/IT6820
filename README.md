@@ -64,7 +64,7 @@ Lệnh này tạo `chuong_trinh.hex` (ảnh bộ nhớ Logisim) và ghi chương
 Cần Java 21 (`JAVA=/đường/dẫn/java` nếu `java` mặc định là bản cũ) và Python 3.
 
 ```sh
-# Test từng module bằng test vector của Logisim (15 module, ~2000 vector)
+# Test từng module bằng test vector của Logisim (15 module, 2078 vector)
 tests/modules/run_module_tests.sh
 
 # Test toàn CPU: chạy mọi chương trình trên cả hai CPU, so với mô hình tham chiếu
@@ -162,4 +162,3 @@ python3 tools/gen/build_project.py
 ```
 
 Lệnh này cần biên dịch `tools/portdump/PortDump.java` trước bằng `javac -cp <logisim.jar> PortDump.java`.
-# IT6820
